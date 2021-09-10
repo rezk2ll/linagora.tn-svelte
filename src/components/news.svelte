@@ -8,8 +8,8 @@
 	<div class="w-full mb-4">
 		<div class="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 py-0 rounded-t" />
 	</div>
-	<div class="grid grid-cols-2 gap-4">
-		<div class="grid grid-cols-1 gap-6 my-6 px-4 md:px-6 lg:px-8">
+	<div class="grid sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 gap-4">
+		<div class="my-6 px-4 md:px-6 lg:px-8">
 			<a
 				class="twitter-timeline"
 				data-height="1535"
