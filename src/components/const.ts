@@ -7,9 +7,19 @@ export const products: Product[] = [
     image: "obm.png"
   },
   {
+    name: "Twake",
+    description: "Une plateforme de collaboration open source sécurisée pour améliorer l'efficacité organisationnelle",
+    image: "twake.png"
+  },
+  {
     name: "Linshare",
     description: "Le partage sécurisé de fichiers volumineux dans votre cloud privé et vers l'extérieur.",
     image: "linshare.png"
+  },
+  {
+    name: "Linto",
+    description: "Votre propre solution vocale intégrée",
+    image: "linto.png"
   },
   {
     name: "LinID",
