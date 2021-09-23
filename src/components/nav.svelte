@@ -30,7 +30,7 @@
 </script>
 
 <nav id="header" class="fixed w-full z-30 top-0 text-white bg-white border-b-2">
-	<div class="w-full container mx-auto flex flex-nowrap items-center justify-between mt-0">
+	<div class="w-full container mx-auto flex {showMenu ? 'flex-wrap' : 'flex-nowrap'} items-center justify-between mt-0">
 		<div class="pl-4 flex items-center">
 			<div class="flex-1 text-white px-10 xs:w-full lg:w-1/4 flex-shrink-0 pt-4 cursor-pointer">
 				<img
