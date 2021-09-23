@@ -149,7 +149,7 @@ export const footerElements: FooterEntry[] = [
         url: 'https://www.linagora.com/fr/faq'
       },
       {
-        title: 'Help',
+        title: 'Aide',
         url: 'https://www.linagora.com/fr/help'
       },
       {
