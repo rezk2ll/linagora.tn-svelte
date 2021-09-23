@@ -1,6 +1,32 @@
 <script lang="ts">
   import { navLinks } from './const';
   import * as animateScroll from "svelte-scrollto";
+	import { onMount } from 'svelte';
+
+	let showMenu = false;
+	let menu = null;
+
+	onMount(() => {
+		const handleOutsideClick = event => {
+			if (showMenu && !menu.contains(event.target)) {
+				showMenu = false;
+			}
+		}
+
+		const handleEscape = event => {
+			if (showMenu && event.key === 'Escape') {
+				showMenu = false;
+			}
+		}
+
+		document.addEventListener('click', handleOutsideClick, false);
+		document.addEventListener('keyup', handleEscape, false);
+
+		return () => {
+			document.removeEventListener('click', handleOutsideClick, false);
+			document.removeEventListener('keyup', handleEscape, false);
+		}
+	});
 
 </script>
 
@@ -16,9 +42,10 @@
 				/>
 			</div>
 		</div>
-		<div class="block lg:hidden pr-4">
+		<div class="block lg:hidden pr-4" bind:this={menu}>
 			<button
 				id="nav-toggle"
+				on:click="{() => showMenu = !showMenu}"
 				class="flex items-center p-1 text-pink-800 hover:text-gray-900 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
 			>
 				<svg class="fill-current h-6 w-6" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -28,7 +55,7 @@
 			</button>
 		</div>
 		<div
-			class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20"
+			class="w-full flex-grow lg:flex lg:items-center lg:w-auto {showMenu ? '' : 'hidden'} mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20"
 			id="nav-content"
 		>
 			<ul class="list-reset lg:flex justify-end flex-1 items-center">
