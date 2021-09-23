@@ -5,7 +5,9 @@
 	export let url: string;
 </script>
 
-<div class="relative rounded-lg flex flex-col md:flex-row items-center md:shadow-xl md:h-72 mx-2 my-6">
+<div
+	class="relative rounded-lg flex flex-col md:flex-row items-center md:shadow-xl md:h-72 mx-2 my-6"
+>
 	<div
 		class="z-0 order-1 flex-auto md:order-2 relative w-full md:w-2/5 h-80 md:h-full overflow-hidden rounded-lg md:rounded-none md:rounded-r-lg"
 	>

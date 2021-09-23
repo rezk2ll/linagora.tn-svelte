@@ -1,7 +1,6 @@
 <script lang="ts">
 	import InvertedWave from './inverted-wave.svelte';
-	import * as animateScroll from "svelte-scrollto";
-
+	import * as animateScroll from 'svelte-scrollto';
 </script>
 
 <div class="pt-24" id="hero">
@@ -15,7 +14,7 @@
 				Prêt à relever les défis du futur avec le logiciel libre ?
 			</p>
 			<button
-				on:click={() => animateScroll.scrollTo({element: "#products"})}
+				on:click={() => animateScroll.scrollTo({ element: '#products' })}
 				class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
 			>
 				En savoir plus
